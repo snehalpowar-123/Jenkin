@@ -1,0 +1,21 @@
+pipeline {
+agent any
+stages{
+stage('Deploy-Dev'){
+steps{
+echo 'Hello'
+}
+}
+stage('Deploy-QA'){
+steps{
+echo 'QA'
+input "Does the staging Environment look ok?"
+}
+}
+stage('Producton'){
+steps{
+echo 'Production'
+}
+}
+}
+}
